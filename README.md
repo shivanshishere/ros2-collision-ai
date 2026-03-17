@@ -1,0 +1,54 @@
+# ROS2 Collision Prediction System
+
+This project implements an AI-based collision prediction system that can predict potential collisions **2 seconds before they occur** using sequential camera frames.
+
+The system integrates **Deep Learning (CNN + LSTM)** with **ROS2 nodes** to process visual data and perform real-time inference.
+
+## Features
+
+- Predicts collision **2 seconds before impact**
+- Uses **CNN + LSTM deep learning architecture**
+- Integrated with **ROS2**
+- Simulated camera using **fake_camera_node**
+- Real-time inference using **collision_ai_node**
+
+## System Architecture
+
+Camera Frames → CNN → Feature Extraction → LSTM → Future Collision Prediction
+
+## ROS2 Nodes
+
+### fake_camera_node.py
+Publishes image frames to ROS2 topic.
+
+### collision_ai_node.py
+Loads trained deep learning model and predicts collision probability.
+
+## Technologies Used
+
+- Python
+- ROS2
+- TensorFlow / Keras
+- OpenCV
+- NumPy
+- CV Bridge
+
+## Model
+
+The model uses:
+
+- **CNN** for spatial feature extraction
+- **LSTM** for temporal sequence learning
+
+This allows the system to analyze frame sequences and predict future collisions.
+
+## Future Improvements
+
+- Real camera integration
+- Deployment on mobile robots
+- Hardware acceleration
+- Autonomous braking system
+
+## Author
+
+Shivansh Mishra
